@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://4n0ujh5065g2"]
 
-[ext_resource type="Script" uid="uid://iy5n34myd78d" path="res://player.gd" id="1_6q757"]
-[ext_resource type="Script" uid="uid://dqu2n6ivi3vht" path="res://cena_teste.gd" id="1_bp36y"]
-[ext_resource type="Script" uid="uid://ctcvjhtx30odn" path="res://collectable.gd" id="2_aocww"]
-[ext_resource type="Texture2D" uid="uid://clvxdqvkkauxp" path="res://Wallpaper.jpg" id="4_36q4r"]
+[ext_resource type="Script" uid="uid://iy5n34myd78d" path="res://scripts/player.gd" id="1_6q757"]
+[ext_resource type="Script" uid="uid://dqu2n6ivi3vht" path="res://scripts/cena_teste.gd" id="1_bp36y"]
+[ext_resource type="Script" uid="uid://ctcvjhtx30odn" path="res://scripts/collectable.gd" id="2_aocww"]
+[ext_resource type="Texture2D" uid="uid://clvxdqvkkauxp" path="res://assets/Wallpaper.jpg" id="4_36q4r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bp36y"]
 albedo_color = Color(1, 1, 0.46666667, 1)
@@ -47,8 +47,10 @@ mesh = SubResource("BoxMesh_36q4r")
 shape = SubResource("ConcavePolygonShape3D_bp36y")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1668815014]
-transform = Transform3D(0.63781387, 0.5516609, -0.5374605, 0, 0.69782794, 0.71626544, 0.7701906, -0.45684403, 0.4450843, -5.8500643, 5.4633174, 4.08563)
+transform = Transform3D(0.8259605, 0.40377888, -0.3933851, 0, 0.69782794, 0.7162655, 0.563728, -0.59160703, 0.5763783, -7.563016, 13.450439, 9.530577)
+projection = 1
 current = true
+size = 13.308
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1751686325 groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
