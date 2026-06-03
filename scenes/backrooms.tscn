@@ -759,7 +759,7 @@ script = ExtResource("9_gst4v")
 level_id = "backrooms"
 
 [node name="Note1" type="Node3D" parent="." unique_id=1215628889]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6208034, 0.68089294, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1457372, 0.68089294, 14.656182)
 script = ExtResource("10_1kqkm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=783827982]
@@ -772,7 +772,7 @@ mesh = SubResource("BoxMesh_tm27x")
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
 [node name="Note2" type="Node3D" parent="." unique_id=1637798846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6208034, 0.68089294, -2.9660878)
+transform = Transform3D(0.58056086, 0, 0.81421685, 0, 1, 0, -0.81421685, 0, 0.58056086, 2.6208034, 0.68089294, -7.21996)
 script = ExtResource("10_1kqkm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1897074064]
@@ -798,11 +798,11 @@ mesh = SubResource("BoxMesh_tm27x")
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
 [node name="Note4" type="Node3D" parent="." unique_id=1354791142]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44965887, 0.68089294, -2.9660878)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.76075, 0.68089294, -2.9660878)
 script = ExtResource("10_1kqkm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Note4" unique_id=2061489973]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
+transform = Transform3D(0.11344765, 0, 0.98275506, 0, 0.025890611, 0, -0.60294235, 0, 0.1849119, 3.4335861, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_tm27x")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Note4/MeshInstance3D" unique_id=103341994]
