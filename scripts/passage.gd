@@ -23,6 +23,10 @@ func _ready() -> void:
 		_trigger.body_entered.connect(_on_trigger_entered)
 		_trigger.monitoring = false
 
+	call_deferred("_connect_logic")
+
+
+func _connect_logic() -> void:
 	var logic_level = get_tree().get_first_node_in_group("logic_level")
 	if logic_level != null:
 		logic_level.solved.connect(open)

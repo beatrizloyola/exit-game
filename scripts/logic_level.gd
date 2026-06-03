@@ -42,6 +42,7 @@ func _check() -> void:
 	var result := LogicEvaluator.evaluate(level_id, vars)
 	expression_updated.emit(vars, result)
 	var all_discovered := _discovered.size() == vars.size()
+
 	if result == target_value and _note_found and all_discovered and not _already_solved:
 		_already_solved = true
 		solved.emit()
