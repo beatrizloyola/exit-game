@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://assets/shaders/static_wall.gdshader" id="1_static"]
+
+[resource]
+shader = ExtResource("1_static")
