@@ -34,8 +34,37 @@ func _build_ui() -> void:
 	_paper.anchor_right  = 0.825
 	_paper.anchor_top    = 0.1
 	_paper.anchor_bottom = 0.88
-	_paper.color = Color(0.95, 0.92, 0.85)
+	_paper.color = Color(1, 1, 1)
 	_paper.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+	var shader := Shader.new()
+	shader.code = """
+shader_type canvas_item;
+
+void fragment() {
+	vec2 uv = UV;
+
+	// Warm cream base with subtle tone variation
+	vec3 paper = vec3(0.96, 0.91, 0.78);
+	float tone = sin(uv.x * 2.1) * sin(uv.y * 1.8) * 0.025;
+	paper += tone;
+
+	// Very subtle grain
+	float grain = fract(sin(dot(uv * vec2(380.0, 290.0), vec2(12.9898, 78.233))) * 43758.5453);
+	grain = (grain - 0.5) * 0.03;
+
+	// Soft edge darkening
+	vec2 edge = uv * 2.0 - 1.0;
+	float vignette = 1.0 - dot(edge * edge, vec2(0.12, 0.12));
+	vignette = clamp(vignette, 0.85, 1.0);
+
+	vec3 color = clamp((paper + grain) * vignette, 0.0, 1.0);
+	COLOR = vec4(color, 1.0);
+}
+"""
+	var mat := ShaderMaterial.new()
+	mat.shader = shader
+	_paper.material = mat
 	add_child(_paper)
 
 	_image = TextureRect.new()
