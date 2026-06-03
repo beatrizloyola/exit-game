@@ -690,7 +690,7 @@ environment = SubResource("Environment_y1yr2")
 script = ExtResource("6_v0yhu")
 
 [node name="SwitchA" type="StaticBody3D" parent="." unique_id=1348156631]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.750972, 1.5591404, 3.5648618)
 script = ExtResource("7_csh2x")
 symbol = "A"
 
@@ -701,7 +701,7 @@ mesh = SubResource("BoxMesh_xx1vg")
 shape = SubResource("BoxShape3D_x4tqr")
 
 [node name="SwitchB" type="StaticBody3D" parent="." unique_id=1055047963]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6926386, 1, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6601963, 1, -0.75535065)
 script = ExtResource("7_csh2x")
 symbol = "B"
 
