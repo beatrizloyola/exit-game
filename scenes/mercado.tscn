@@ -3,11 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://b6bc8mbngnfpj" path="res://assets/mercado/source/магазин.glb" id="1_jacxh"]
 [ext_resource type="Script" uid="uid://iy5n34myd78d" path="res://scripts/player.gd" id="2_rmmb3"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="3_t8l8p"]
-[ext_resource type="Texture2D" uid="uid://b0n3u4mc5s3v" path="res://assets/mercado/noteMercadoPlaceholder.png" id="4_u4spf"]
 [ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="5_028to"]
 [ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="6_piva5"]
 [ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="7_0dap2"]
+[ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="8_u4spf"]
 [ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="8_x4f2d"]
+[ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="9_028to"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jhrjp"]
 
@@ -148,6 +149,19 @@ size = Vector3(9.711548, 2.8973389, 0.62976074)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_foyy4"]
 size = Vector3(10, 3, 0.3)
+
+[sub_resource type="Resource" id="Resource_piva5"]
+script = ExtResource("9_028to")
+text = "Todos os produtos pertencem a uma prateleira."
+
+[sub_resource type="Resource" id="Resource_0dap2"]
+script = ExtResource("9_028to")
+text = "Você não pertence a lugar nenhum."
+
+[sub_resource type="Resource" id="Resource_x4f2d"]
+script = ExtResource("9_028to")
+text = "((A v B) ^ ~(A ^ B)) = V"
+is_tip = true
 
 [node name="Node3D" type="Node3D" unique_id=1913688109]
 
@@ -385,18 +399,45 @@ light_specular = 0.342
 omni_range = 6.0
 omni_attenuation = 0.2
 
-[node name="Note" type="Node3D" parent="." unique_id=669537074]
+[node name="Note1" type="Node3D" parent="." unique_id=669537074]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8544378, 1.7653373, 0)
 script = ExtResource("3_t8l8p")
-note_texture = ExtResource("4_u4spf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note" unique_id=1118676752]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=1118676752]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
 mesh = SubResource("BoxMesh_14wqw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note/MeshInstance3D" unique_id=2024718271]
+[node name="StaticBody3D" type="StaticBody3D" parent="Note1/MeshInstance3D" unique_id=2024718271]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note/MeshInstance3D/StaticBody3D" unique_id=1774934159]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Note1/MeshInstance3D/StaticBody3D" unique_id=1774934159]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
+
+[node name="Note2" type="Node3D" parent="." unique_id=316474624]
+transform = Transform3D(0.883733, 0, -0.4679915, 0, 1, 0, 0.4679915, 0, 0.883733, -2.715582, 1.7653373, 5.9578485)
+script = ExtResource("3_t8l8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1275640284]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Note2/MeshInstance3D" unique_id=547326785]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Note2/MeshInstance3D/StaticBody3D" unique_id=1286063941]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
+
+[node name="Note3" type="Node3D" parent="." unique_id=829938484]
+transform = Transform3D(0.34274167, 0, -0.93942976, 0, 1, 0, 0.93942976, 0, 0.34274167, -8.708107, 1.7653373, 5.9578485)
+script = ExtResource("3_t8l8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Note3" unique_id=1333258581]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Note3/MeshInstance3D" unique_id=195088333]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Note3/MeshInstance3D/StaticBody3D" unique_id=2022405096]
 transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
 shape = SubResource("ConcavePolygonShape3D_twfg5")
 
@@ -454,5 +495,9 @@ open_distance = 3.5
 [node name="LevelHUD" type="CanvasLayer" parent="." unique_id=1891030544]
 script = ExtResource("8_x4f2d")
 level_id = "mercado"
+
+[node name="Node" type="Node" parent="." unique_id=1203647268]
+script = ExtResource("8_u4spf")
+items = Array[ExtResource("9_028to")]([SubResource("Resource_piva5"), SubResource("Resource_0dap2"), SubResource("Resource_x4f2d")])
 
 [editable path="Map"]
