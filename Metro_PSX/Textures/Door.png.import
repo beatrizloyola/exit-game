@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs7gvi5t1hu4l"
-path.s3tc="res://.godot/imported/Door.png-bc1ad360e3de6fcf6d05d277650121be.s3tc.ctex"
+path.s3tc="res://.godot/imported/Door.png-5ca3f38cfcf267112c312f20659af1df.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Metro_PSX/textures/Door.png"
-dest_files=["res://.godot/imported/Door.png-bc1ad360e3de6fcf6d05d277650121be.s3tc.ctex"]
+source_file="res://Metro_PSX/Textures/Door.png"
+dest_files=["res://.godot/imported/Door.png-5ca3f38cfcf267112c312f20659af1df.s3tc.ctex"]
 
 [params]
 
