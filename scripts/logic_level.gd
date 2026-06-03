@@ -9,10 +9,12 @@ signal solved
 
 var vars: Dictionary = {}
 var _already_solved := false
+var _note_found := false
 
 
 func _ready() -> void:
 	add_to_group("logic_level")
+	NoteReader.note_collected.connect(_on_note_collected)
 	call_deferred("_setup")
 
 
@@ -24,6 +26,9 @@ func _setup() -> void:
 	_check()
 
 
+func _on_note_collected() -> void:
+	_note_found = true
+	_check()
 
 
 func _on_state_changed(symbol: String, value: bool) -> void:
@@ -34,6 +39,6 @@ func _on_state_changed(symbol: String, value: bool) -> void:
 func _check() -> void:
 	var result := LogicEvaluator.evaluate(level_id, vars)
 	expression_updated.emit(vars, result)
-	if result == target_value and not _already_solved:
+	if result == target_value and _note_found and not _already_solved:
 		_already_solved = true
 		solved.emit()
