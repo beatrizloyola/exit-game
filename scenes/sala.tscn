@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="7_7ubti"]
 [ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="8_y5s20"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="9_y5s20"]
+[ext_resource type="Material" path="res://assets/materials/static_wall_material.tres" id="10_static"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7ubti"]
 height = 1.9208984
@@ -238,6 +239,7 @@ shape = SubResource("BoxShape3D_12o68")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1113147344]
 transform = Transform3D(-9.669999, 0, 2.6226832e-08, 0, 2.68, 0, -8.4537817e-07, 0, -0.29999998, -0.8588573, 1.424382, -8.160018)
 mesh = SubResource("BoxMesh_y5s20")
+material_override = ExtResource("10_static")
 
 [node name="PassageTrigger" type="Area3D" parent="." unique_id=2108955947]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822237, 1.1190706, -7.901118)
