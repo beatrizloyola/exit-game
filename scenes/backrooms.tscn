@@ -688,6 +688,7 @@ environment = SubResource("Environment_y1yr2")
 
 [node name="LogicLevel" type="Node" parent="." unique_id=731128870]
 script = ExtResource("6_v0yhu")
+level_id = "backrooms"
 
 [node name="SwitchA" type="StaticBody3D" parent="." unique_id=1348156631]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.750972, 1.5591404, 3.5648618)
@@ -737,6 +738,7 @@ open_distance = 3.5
 
 [node name="LevelHUD" type="CanvasLayer" parent="." unique_id=1301869752]
 script = ExtResource("9_gst4v")
+level_id = "backrooms"
 
 [node name="Note" type="Node3D" parent="." unique_id=1215628889]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6208034, 0.68089294, 0)

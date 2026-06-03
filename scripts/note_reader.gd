@@ -57,6 +57,10 @@ func _set_visible(value: bool) -> void:
 	_is_showing = value
 	visible = value
 
+	var hud = get_tree().get_first_node_in_group("level_hud")
+	if hud:
+		hud.visible = not value
+
 	var player = get_tree().get_first_node_in_group("Player")
 	if player and player.has_method("set_reading"):
 		player.set_reading(value)

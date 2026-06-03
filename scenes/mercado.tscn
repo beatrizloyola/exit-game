@@ -2,6 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://b6bc8mbngnfpj" path="res://assets/mercado/source/магазин.glb" id="1_jacxh"]
 [ext_resource type="Script" uid="uid://iy5n34myd78d" path="res://scripts/player.gd" id="2_rmmb3"]
+[ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="3_t8l8p"]
+[ext_resource type="Texture2D" uid="uid://b0n3u4mc5s3v" path="res://assets/mercado/noteMercadoPlaceholder.png" id="4_u4spf"]
+[ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="5_028to"]
+[ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="6_piva5"]
+[ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="7_0dap2"]
+[ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="8_x4f2d"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jhrjp"]
 
@@ -118,6 +124,31 @@ adjustment_enabled = true
 adjustment_brightness = 0.7
 adjustment_contrast = 1.1
 
+[sub_resource type="BoxMesh" id="BoxMesh_14wqw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_twfg5"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_45cd2"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7o0jh"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_trxbn"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_meawp"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bh8s0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rxtdj"]
+size = Vector3(9.711548, 2.8973389, 0.62976074)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_foyy4"]
+size = Vector3(10, 3, 0.3)
+
 [node name="Node3D" type="Node3D" unique_id=1913688109]
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=578991792 groups=["Player"]]
@@ -195,7 +226,10 @@ shape = SubResource("ConvexPolygonShape3D_45cd2")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Cube_036/StaticBody3D" unique_id=117038108]
 shape = SubResource("ConvexPolygonShape3D_7o0jh")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Map/Cube_040" parent_id_path=PackedInt32Array(518227643, 980808705) index="0" unique_id=39595612]
+[node name="Cube_040" parent="Map" index="27" unique_id=980808705]
+transform = Transform3D(0.88097817, 0, 0, 0, 0.06897315, 0, 0, 0, 0.4628284, 7.6865273, 9.160385, 7.6279407)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/Cube_040" index="0" unique_id=39595612]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Cube_040/StaticBody3D" unique_id=634369462]
 shape = SubResource("ConvexPolygonShape3D_trxbn")
@@ -278,6 +312,9 @@ shape = SubResource("ConvexPolygonShape3D_vkfw4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Cube_3647/StaticBody3D" unique_id=1255291572]
 shape = SubResource("ConvexPolygonShape3D_t8l8p")
 
+[node name="мб" parent="Map" index="3459" unique_id=1269913111]
+transform = Transform3D(13.184506, 0, 0, 0, -1.5717156e-06, -13.184506, 0, 13.184506, -1.5717156e-06, -0.50797665, 26.825628, -0.799459)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/Cube_010" parent_id_path=PackedInt32Array(518227643, 258807806) index="0" unique_id=57343258]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Cube_010/StaticBody3D" unique_id=1989661202]
@@ -347,5 +384,75 @@ light_indirect_energy = 0.0
 light_specular = 0.342
 omni_range = 6.0
 omni_attenuation = 0.2
+
+[node name="Note" type="Node3D" parent="." unique_id=669537074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8544378, 1.7653373, 0)
+script = ExtResource("3_t8l8p")
+note_texture = ExtResource("4_u4spf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Note" unique_id=1118676752]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Note/MeshInstance3D" unique_id=2024718271]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Note/MeshInstance3D/StaticBody3D" unique_id=1774934159]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
+
+[node name="SwitchA" type="StaticBody3D" parent="." unique_id=1541700915]
+transform = Transform3D(-0.81781834, 0, -0.5754764, 0, 1, 0, 0.5754764, 0, -0.81781834, 11.402339, 1.5591404, 2.9433646)
+script = ExtResource("5_028to")
+symbol = "A"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SwitchA" unique_id=1252656967]
+mesh = SubResource("BoxMesh_45cd2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchA" unique_id=1269854611]
+shape = SubResource("BoxShape3D_7o0jh")
+
+[node name="SwitchB" type="StaticBody3D" parent="." unique_id=1240749158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.740474, 0.48842466, -4.4746513)
+script = ExtResource("5_028to")
+symbol = "B"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SwitchB" unique_id=267785500]
+mesh = SubResource("BoxMesh_trxbn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchB" unique_id=169991364]
+shape = SubResource("BoxShape3D_meawp")
+
+[node name="LogicLevel" type="Node" parent="." unique_id=1189611819]
+script = ExtResource("6_piva5")
+level_id = "mercado"
+
+[node name="PassageWall" type="StaticBody3D" parent="." unique_id=2103086767]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.1137886, 1.5, 6.393137)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PassageWall" unique_id=407764796]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 0.3, 0, 0, -2.578783)
+mesh = SubResource("BoxMesh_bh8s0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PassageWall" unique_id=1204571377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7243557)
+shape = SubResource("BoxShape3D_rxtdj")
+
+[node name="PassageTrigger" type="Area3D" parent="." unique_id=2063165556]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.1137886, 1, 3.9254036)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PassageTrigger" unique_id=471213462]
+shape = SubResource("BoxShape3D_foyy4")
+
+[node name="Passage" type="Node3D" parent="." unique_id=1314027119]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.1137886, 0, 24.393137)
+script = ExtResource("7_0dap2")
+next_scene = "res://scenes/mercado.tscn"
+wall_path = NodePath("../PassageWall")
+trigger_path = NodePath("../PassageTrigger")
+open_distance = 3.5
+
+[node name="LevelHUD" type="CanvasLayer" parent="." unique_id=1891030544]
+script = ExtResource("8_x4f2d")
+level_id = "mercado"
 
 [editable path="Map"]

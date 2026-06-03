@@ -8,6 +8,7 @@ signal solved
 @export var target_value: bool = true
 
 var vars: Dictionary = {}
+var _discovered: Dictionary = {}
 var _already_solved := false
 var _note_found := false
 
@@ -33,12 +34,14 @@ func _on_note_collected() -> void:
 
 func _on_state_changed(symbol: String, value: bool) -> void:
 	vars[symbol] = value
+	_discovered[symbol] = true
 	_check()
 
 
 func _check() -> void:
 	var result := LogicEvaluator.evaluate(level_id, vars)
 	expression_updated.emit(vars, result)
-	if result == target_value and _note_found and not _already_solved:
+	var all_discovered := _discovered.size() == vars.size()
+	if result == target_value and _note_found and all_discovered and not _already_solved:
 		_already_solved = true
 		solved.emit()

@@ -70,7 +70,9 @@ func _update_display() -> void:
 
 	if not _discovered_vars.is_empty():
 		var vars_line := ""
-		for symbol in _discovered_vars:
+		var sorted_keys := _discovered_vars.keys()
+		sorted_keys.sort()
+		for symbol in sorted_keys:
 			vars_line += symbol + "=" + ("V" if _discovered_vars[symbol] else "F") + "  "
 		lines += vars_line.strip_edges()
 
