@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cygehh6bftv6h"]
+
+[ext_resource type="Texture2D" uid="uid://dswjdria3egdq" path="res://assets/lever-power-switch/textures/Lever_Switch_DefaultMaterial_BaseColor.png" id="1_w3461"]
+[ext_resource type="Texture2D" uid="uid://decdnhb6wjsni" path="res://assets/lever-power-switch/textures/Lever_Switch_DefaultMaterial_OcclusionRoug.png" id="3_t1n44"]
+
+[resource]
+albedo_texture = ExtResource("1_w3461")
+roughness_texture = ExtResource("3_t1n44")
+normal_enabled = true

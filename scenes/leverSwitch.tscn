@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btl1c74t5bekl"]
+
+[ext_resource type="PackedScene" uid="uid://deh403k5mergm" path="res://assets/lever-power-switch/source/Lever Switch.fbx" id="1_2m20r"]
+[ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="2_awamt"]
+[ext_resource type="Material" uid="uid://cygehh6bftv6h" path="res://assets/lever-power-switch/textures/LeverMaterial.tres" id="3_mehwv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_awamt"]
+size = Vector3(0.3336548, 0.46608886, 0.51362306)
+
+[node name="Lever Switch" unique_id=1897908362 instance=ExtResource("1_2m20r")]
+script = ExtResource("2_awamt")
+symbol = ""
+
+[node name="Po_Bo" parent="." index="0" unique_id=1356024155]
+transform = Transform3D(14.275, 0, 0, 0, -6.2398004e-07, 14.275, 0, -14.275, -6.2398004e-07, 0, -0.146622, 0)
+
+[node name="Skeleton3D" parent="Po_Bo" index="0" unique_id=1689680597]
+bones/1/rotation = Quaternion(-0.1609064, 0, 0, 0.9869697)
+
+[node name="Handle" parent="Po_Bo/Skeleton3D" index="0" unique_id=1212299742]
+surface_material_override/0 = ExtResource("3_mehwv")
+
+[node name="Panel" parent="Po_Bo/Skeleton3D" index="1" unique_id=635370353]
+surface_material_override/0 = ExtResource("3_mehwv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=861901774]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=556247365]
+shape = SubResource("BoxShape3D_awamt")
+debug_color = Color(0.87699825, 0.0004075712, 0.83283156, 0.41960785)

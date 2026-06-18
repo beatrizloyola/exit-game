@@ -36,6 +36,7 @@
 [ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="34_iiu4r"]
 [ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="35_57brq"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="35_bk7cg"]
+[ext_resource type="PackedScene" uid="uid://btl1c74t5bekl" path="res://scenes/leverSwitch.tscn" id="35_iiu4r"]
 [ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="36_iiu4r"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j2cwc"]
@@ -634,52 +635,6 @@ shape = SubResource("ConcavePolygonShape3D_hq5ij")
 
 [node name="Sketchfab_Scene" parent="Map/Clutter" unique_id=1404450160 instance=ExtResource("9_0s8rv")]
 transform = Transform3D(-6.5567085e-09, 0, -0.15, 0, 0.15, 0, 0.15, 0, -6.5567085e-09, 14.358412, 1.6577338, -15.020371)
-
-[node name="Skeleton3D" parent="Map/Clutter/Sketchfab_Scene/Sketchfab_model/root/GLTF_SceneRootNode/Armature_47/GLTF_created_0" parent_id_path=PackedInt32Array(1404450160, 904556806) index="0" unique_id=1222587955]
-bones/1/rotation = Quaternion(0.09898638, -8.3351216e-19, -2.8977933e-17, 0.9950889)
-bones/2/rotation = Quaternion(0.08864664, 1.1874002e-07, 1.056751e-08, 0.9960632)
-bones/3/rotation = Quaternion(0.13995466, 1.1803599e-07, 5.0051696e-08, 0.990158)
-bones/4/rotation = Quaternion(-0.04278685, -0.058066856, -0.053355433, 0.99596727)
-bones/5/rotation = Quaternion(0.07510759, -0.05395749, 0.87676674, -0.4719402)
-bones/6/rotation = Quaternion(0.28125986, 0.22265682, -0.3183015, 0.877497)
-bones/7/rotation = Quaternion(0.16519693, -0.007668124, 0.11920132, 0.9790007)
-bones/9/position = Vector3(-0.061782386, 1.8933645, -0.30318898)
-bones/9/rotation = Quaternion(-0.053484842, -0.0014674378, -0.0384695, 0.9978264)
-bones/10/rotation = Quaternion(0.0039607133, 0.0017075168, -0.21701828, 0.976158)
-bones/11/position = Vector3(-0.057655863, 2.0006642, -0.12632875)
-bones/11/rotation = Quaternion(0.007422341, -0.0017903739, -0.043293707, 0.9990332)
-bones/12/rotation = Quaternion(-0.023954641, -0.004937414, -0.18992504, 0.9814939)
-bones/13/position = Vector3(-0.057049688, 2.0164437, 0.12632884)
-bones/13/rotation = Quaternion(0.04015771, -0.0006540509, -0.061272275, 0.9973127)
-bones/14/rotation = Quaternion(-0.008528874, -0.0009488004, -0.1502886, 0.98860496)
-bones/15/position = Vector3(-0.057898175, 1.9943529, 0.32529637)
-bones/15/rotation = Quaternion(0.083912864, -0.00095080904, -0.053838123, 0.9950172)
-bones/16/rotation = Quaternion(-0.03948451, -0.005486982, -0.17796677, 0.98322874)
-bones/17/rotation = Quaternion(0.22977139, 0.019999608, -0.1303095, 0.9642741)
-bones/18/rotation = Quaternion(-0.17145719, -0.049968794, -0.05877991, 0.98216623)
-bones/19/rotation = Quaternion(0.060714137, 0.005620079, -0.12076104, 0.99080724)
-bones/20/rotation = Quaternion(-0.17858462, 0.13861443, -0.00084599585, 0.9741113)
-bones/21/position = Vector3(-3.419823e-07, 0.18502888, 0.34957042)
-bones/21/rotation = Quaternion(0.59997797, 1.962976e-07, 4.3436953e-07, 0.8000166)
-bones/24/rotation = Quaternion(-0.03951355, -0.056691308, 0.89041364, 0.4498759)
-bones/25/rotation = Quaternion(0.3624807, -0.2658839, 0.39665276, 0.8003625)
-bones/26/rotation = Quaternion(0.1651969, 0.00766815, -0.1192013, 0.9790007)
-bones/28/position = Vector3(0.061782707, 1.893365, -0.30318913)
-bones/28/rotation = Quaternion(-0.053484835, 0.0014674678, 0.038469486, 0.9978264)
-bones/29/rotation = Quaternion(0.003960717, -0.0017074931, 0.21701828, 0.976158)
-bones/30/position = Vector3(0.0576559, 2.0006654, -0.12632872)
-bones/30/rotation = Quaternion(0.0074223396, 0.0017903438, 0.043293715, 0.9990332)
-bones/31/rotation = Quaternion(-0.023954635, 0.004937426, 0.18992499, 0.9814939)
-bones/32/position = Vector3(0.057049684, 2.016443, 0.12632845)
-bones/32/rotation = Quaternion(0.040157713, 0.0006540436, 0.061272264, 0.9973127)
-bones/33/rotation = Quaternion(-0.008528866, 0.00094879064, 0.15028858, 0.98860496)
-bones/34/position = Vector3(0.057898436, 1.9943538, 0.32529703)
-bones/34/rotation = Quaternion(0.08391285, 0.0009508167, 0.0538381, 0.9950172)
-bones/35/rotation = Quaternion(-0.0394845, 0.0054869726, 0.17796676, 0.98322874)
-bones/36/rotation = Quaternion(0.2297714, -0.01999961, 0.13030949, 0.9642742)
-bones/37/rotation = Quaternion(-0.1714572, 0.0499688, 0.05877991, 0.98216623)
-bones/38/rotation = Quaternion(0.70255876, 0.12779585, 0.696029, 0.07498732)
-bones/41/rotation = Quaternion(0.70255876, -0.12779583, -0.696029, 0.07498732)
 
 [node name="darkoverlay" type="MeshInstance3D" parent="Map/Clutter/Sketchfab_Scene" unique_id=664997867]
 transform = Transform3D(22.466469, 0, 1.8189894e-12, 0, 47.83697, 0, -2.2737368e-13, 0, 176.92665, 0, 9.727516, 5.907799)
@@ -1364,17 +1319,6 @@ target_value = false
 
 [node name="Switchs" type="Node" parent="." unique_id=1120389537]
 
-[node name="SwitchA" type="StaticBody3D" parent="Switchs" unique_id=759790766]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.049356, 1.2270364, -15.892033)
-script = ExtResource("34_iiu4r")
-symbol = "A"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchA" unique_id=905586463]
-mesh = SubResource("BoxMesh_occwe")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchA" unique_id=443754920]
-shape = SubResource("BoxShape3D_ft3q5")
-
 [node name="SwitchB" type="StaticBody3D" parent="Switchs" unique_id=688095813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.089561, 1.032803, -15.8331785)
 script = ExtResource("34_iiu4r")
@@ -1407,6 +1351,12 @@ mesh = SubResource("BoxMesh_occwe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchD" unique_id=1498634226]
 shape = SubResource("BoxShape3D_ft3q5")
+
+[node name="LeverSwitchA" parent="Switchs" unique_id=1897908362 instance=ExtResource("35_iiu4r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.050968, 1.227, -15.922214)
+symbol = "A"
+
+[node name="LeverSwitchB" parent="Switchs" unique_id=650569630 instance=ExtResource("35_iiu4r")]
 
 [node name="Notes" type="Node" parent="." unique_id=1694544861]
 script = ExtResource("35_57brq")
