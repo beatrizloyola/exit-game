@@ -1332,56 +1332,56 @@ symbol = "D"
 script = ExtResource("35_57brq")
 items = Array[ExtResource("36_iiu4r")]([SubResource("Resource_bk7cg"), SubResource("Resource_7pmh0"), SubResource("Resource_bfmiw"), SubResource("Resource_bh1vf")])
 
-[node name="Note1" type="Node3D" parent="." unique_id=474069881]
+[node name="Note1" type="Node3D" parent="Notes" unique_id=474069881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.979101, 0.7223418, -9.551897)
 script = ExtResource("35_bk7cg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=1228433978]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note1" unique_id=1228433978]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_u77k1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note1/MeshInstance3D" unique_id=1919724425]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note1/MeshInstance3D" unique_id=1919724425]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note1/MeshInstance3D/StaticBody3D" unique_id=2104452520]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note1/MeshInstance3D/StaticBody3D" unique_id=2104452520]
 shape = SubResource("ConcavePolygonShape3D_occwe")
 
-[node name="Note2" type="Node3D" parent="." unique_id=292941322]
+[node name="Note2" type="Node3D" parent="Notes" unique_id=292941322]
 transform = Transform3D(0.73607343, 0, 0.6769017, 0, 1, 0, -0.6769017, 0, 0.73607343, -15.979101, 0.7223418, -2.495183)
 script = ExtResource("35_bk7cg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1943548295]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note2" unique_id=1943548295]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_u77k1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note2/MeshInstance3D" unique_id=472935891]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note2/MeshInstance3D" unique_id=472935891]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note2/MeshInstance3D/StaticBody3D" unique_id=950209827]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note2/MeshInstance3D/StaticBody3D" unique_id=950209827]
 shape = SubResource("ConcavePolygonShape3D_occwe")
 
-[node name="Note3" type="Node3D" parent="." unique_id=1488058519]
+[node name="Note3" type="Node3D" parent="Notes" unique_id=1488058519]
 transform = Transform3D(0.15069154, 0, -0.9885808, 0, 1, 0, 0.9885808, 0, 0.15069154, -11.394011, 0.7223418, -4.1500273)
 script = ExtResource("35_bk7cg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note3" unique_id=911821856]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note3" unique_id=911821856]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_u77k1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note3/MeshInstance3D" unique_id=1787028961]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note3/MeshInstance3D" unique_id=1787028961]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note3/MeshInstance3D/StaticBody3D" unique_id=421427384]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note3/MeshInstance3D/StaticBody3D" unique_id=421427384]
 shape = SubResource("ConcavePolygonShape3D_occwe")
 
-[node name="Note4" type="Node3D" parent="." unique_id=2075476017]
+[node name="Note4" type="Node3D" parent="Notes" unique_id=2075476017]
 transform = Transform3D(-0.29363984, 0, -0.95591605, 0, 1, 0, 0.95591605, 0, -0.29363984, -11.394011, 0.7223418, -10.440361)
 script = ExtResource("35_bk7cg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note4" unique_id=1221540576]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note4" unique_id=1221540576]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_u77k1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note4/MeshInstance3D" unique_id=1453132122]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note4/MeshInstance3D" unique_id=1453132122]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note4/MeshInstance3D/StaticBody3D" unique_id=136995876]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note4/MeshInstance3D/StaticBody3D" unique_id=136995876]
 shape = SubResource("ConcavePolygonShape3D_occwe")
 
 [editable path="Map/Clutter/Sketchfab_Scene"]

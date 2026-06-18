@@ -126,11 +126,6 @@ adjustment_enabled = true
 adjustment_brightness = 0.7
 adjustment_contrast = 1.1
 
-[sub_resource type="BoxMesh" id="BoxMesh_14wqw"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_twfg5"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
 [sub_resource type="BoxMesh" id="BoxMesh_45cd2"]
 size = Vector3(0.4, 0.4, 0.4)
 
@@ -171,6 +166,11 @@ text = "Você não pertence a lugar nenhum."
 script = ExtResource("9_028to")
 text = "((A v B) ^ ~(A ^ B)) = V"
 is_tip = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_14wqw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_twfg5"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Node3D" type="Node3D" unique_id=1913688109]
 
@@ -408,48 +408,6 @@ light_specular = 0.342
 omni_range = 6.0
 omni_attenuation = 0.2
 
-[node name="Note1" type="Node3D" parent="." unique_id=669537074]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8544378, 1.7653373, 0)
-script = ExtResource("3_t8l8p")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=1118676752]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
-mesh = SubResource("BoxMesh_14wqw")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note1/MeshInstance3D" unique_id=2024718271]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note1/MeshInstance3D/StaticBody3D" unique_id=1774934159]
-transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
-shape = SubResource("ConcavePolygonShape3D_twfg5")
-
-[node name="Note2" type="Node3D" parent="." unique_id=316474624]
-transform = Transform3D(0.883733, 0, -0.4679915, 0, 1, 0, 0.4679915, 0, 0.883733, -2.715582, 1.7653373, 5.9578485)
-script = ExtResource("3_t8l8p")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1275640284]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
-mesh = SubResource("BoxMesh_14wqw")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note2/MeshInstance3D" unique_id=547326785]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note2/MeshInstance3D/StaticBody3D" unique_id=1286063941]
-transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
-shape = SubResource("ConcavePolygonShape3D_twfg5")
-
-[node name="Note3" type="Node3D" parent="." unique_id=829938484]
-transform = Transform3D(0.34274167, 0, -0.93942976, 0, 1, 0, 0.93942976, 0, 0.34274167, -8.708107, 1.7653373, 5.9578485)
-script = ExtResource("3_t8l8p")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note3" unique_id=1333258581]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
-mesh = SubResource("BoxMesh_14wqw")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note3/MeshInstance3D" unique_id=195088333]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note3/MeshInstance3D/StaticBody3D" unique_id=2022405096]
-transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
-shape = SubResource("ConcavePolygonShape3D_twfg5")
-
 [node name="LogicLevel" type="Node" parent="." unique_id=1189611819]
 script = ExtResource("6_piva5")
 level_id = "mercado"
@@ -489,8 +447,8 @@ shape = SubResource("BoxShape3D_rxtdj")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1126610556]
 transform = Transform3D(-9.669999, 0, 2.6226832e-08, 0, 2.68, 0, -8.4537817e-07, 0, -0.29999998, 5.114, 1.5, 9.217383)
-mesh = SubResource("BoxMesh_u4spf")
 material_override = ExtResource("10_static")
+mesh = SubResource("BoxMesh_u4spf")
 
 [node name="PassageTrigger" type="Area3D" parent="." unique_id=2063165556]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.1137886, 1, 8.953853)
@@ -513,5 +471,49 @@ level_id = "mercado"
 [node name="Node" type="Node" parent="." unique_id=1203647268]
 script = ExtResource("8_u4spf")
 items = Array[ExtResource("9_028to")]([SubResource("Resource_piva5"), SubResource("Resource_0dap2"), SubResource("Resource_x4f2d")])
+
+[node name="Notas" type="Node" parent="." unique_id=1445292794]
+
+[node name="Note1" type="Node3D" parent="Notas" unique_id=669537074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8544378, 1.7653373, 0)
+script = ExtResource("3_t8l8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notas/Note1" unique_id=1118676752]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notas/Note1/MeshInstance3D" unique_id=2024718271]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notas/Note1/MeshInstance3D/StaticBody3D" unique_id=1774934159]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
+
+[node name="Note2" type="Node3D" parent="Notas" unique_id=316474624]
+transform = Transform3D(0.883733, 0, -0.4679915, 0, 1, 0, 0.4679915, 0, 0.883733, -2.715582, 1.7653373, 5.9578485)
+script = ExtResource("3_t8l8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notas/Note2" unique_id=1275640284]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notas/Note2/MeshInstance3D" unique_id=547326785]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notas/Note2/MeshInstance3D/StaticBody3D" unique_id=1286063941]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
+
+[node name="Note3" type="Node3D" parent="Notas" unique_id=829938484]
+transform = Transform3D(0.34274167, 0, -0.93942976, 0, 1, 0, 0.93942976, 0, 0.34274167, -8.708107, 1.7653373, 5.9578485)
+script = ExtResource("3_t8l8p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notas/Note3" unique_id=1333258581]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -1.6527414, -3.9971309)
+mesh = SubResource("BoxMesh_14wqw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notas/Note3/MeshInstance3D" unique_id=195088333]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notas/Note3/MeshInstance3D/StaticBody3D" unique_id=2022405096]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 1.0000043, 0)
+shape = SubResource("ConcavePolygonShape3D_twfg5")
 
 [editable path="Map"]

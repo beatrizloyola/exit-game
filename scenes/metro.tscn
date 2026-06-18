@@ -198,11 +198,6 @@ size = Vector3(0.4, 0.4, 0.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wyfj1"]
 size = Vector3(0.4, 0.4, 0.4)
 
-[sub_resource type="BoxMesh" id="BoxMesh_wyfj1"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mwsj6"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
 [sub_resource type="Resource" id="Resource_mwsj6"]
 script = ExtResource("13_wyfj1")
 text = "Todo trilho leva a algum lugar."
@@ -220,6 +215,11 @@ script = ExtResource("13_wyfj1")
 text = "((A ^ B) v (C ^ ~D)) = V"
 is_tip = true
 metadata/_custom_type_script = "uid://ciauqs7ueoib"
+
+[sub_resource type="BoxMesh" id="BoxMesh_wyfj1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mwsj6"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Scene" type="Node3D" unique_id=1312036616]
 
@@ -614,8 +614,8 @@ shape = SubResource("BoxShape3D_l8yi8")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=999338178]
 transform = Transform3D(-9.669999, 0, 2.6226832e-08, 0, 2.68, 0, -8.4537817e-07, 0, -0.29999998, -12.182403, 1.5455883, -25.05417)
-mesh = SubResource("BoxMesh_v8jcj")
 material_override = ExtResource("14_static")
+mesh = SubResource("BoxMesh_v8jcj")
 
 [node name="PassageTrigger" type="Area3D" parent="." unique_id=1469930494]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.347207, 1, -24.788713)
@@ -682,60 +682,60 @@ mesh = SubResource("BoxMesh_l8yi8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchD" unique_id=695067347]
 shape = SubResource("BoxShape3D_wyfj1")
 
-[node name="Note1" type="Node3D" parent="." unique_id=187192749]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.463806, 1.3955781, 0)
-script = ExtResource("11_l8yi8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=1769777535]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
-mesh = SubResource("BoxMesh_wyfj1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note1/MeshInstance3D" unique_id=1134130485]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note1/MeshInstance3D/StaticBody3D" unique_id=1147878173]
-shape = SubResource("ConcavePolygonShape3D_mwsj6")
-
-[node name="Note2" type="Node3D" parent="." unique_id=2125387547]
-transform = Transform3D(0.6520455, 0, 0.75817984, 0, 1, 0, -0.75817984, 0, 0.6520455, -17.463806, 1.3955781, -14.392675)
-script = ExtResource("11_l8yi8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1030401827]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
-mesh = SubResource("BoxMesh_wyfj1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note2/MeshInstance3D" unique_id=1394245816]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note2/MeshInstance3D/StaticBody3D" unique_id=2079548389]
-shape = SubResource("ConcavePolygonShape3D_mwsj6")
-
-[node name="Note3" type="Node3D" parent="." unique_id=397376611]
-transform = Transform3D(0.93928605, 0, 0.34313515, 0, 1, 0, -0.34313515, 0, 0.93928605, -13.400578, 1.3955781, -19.99226)
-script = ExtResource("11_l8yi8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note3" unique_id=1029098238]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
-mesh = SubResource("BoxMesh_wyfj1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note3/MeshInstance3D" unique_id=1904442330]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note3/MeshInstance3D/StaticBody3D" unique_id=2024920668]
-shape = SubResource("ConcavePolygonShape3D_mwsj6")
-
-[node name="Note4" type="Node3D" parent="." unique_id=718276769]
-transform = Transform3D(0.93928605, 0, 0.34313515, 0, 1, 0, -0.34313515, 0, 0.93928605, -13.686468, 1.3955781, -5.081873)
-script = ExtResource("11_l8yi8")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note4" unique_id=880099680]
-transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
-mesh = SubResource("BoxMesh_wyfj1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Note4/MeshInstance3D" unique_id=218136010]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note4/MeshInstance3D/StaticBody3D" unique_id=379885304]
-shape = SubResource("ConcavePolygonShape3D_mwsj6")
-
 [node name="Notes" type="Node" parent="." unique_id=1742686134]
 script = ExtResource("12_v8jcj")
 items = Array[ExtResource("13_wyfj1")]([SubResource("Resource_mwsj6"), SubResource("Resource_dom4r"), SubResource("Resource_nedod"), SubResource("Resource_v8jcj")])
+
+[node name="Note1" type="Node3D" parent="Notes" unique_id=187192749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.463806, 1.3955781, 0)
+script = ExtResource("11_l8yi8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note1" unique_id=1769777535]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
+mesh = SubResource("BoxMesh_wyfj1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note1/MeshInstance3D" unique_id=1134130485]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note1/MeshInstance3D/StaticBody3D" unique_id=1147878173]
+shape = SubResource("ConcavePolygonShape3D_mwsj6")
+
+[node name="Note2" type="Node3D" parent="Notes" unique_id=2125387547]
+transform = Transform3D(0.6520455, 0, 0.75817984, 0, 1, 0, -0.75817984, 0, 0.6520455, -17.463806, 1.3955781, -14.392675)
+script = ExtResource("11_l8yi8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note2" unique_id=1030401827]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
+mesh = SubResource("BoxMesh_wyfj1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note2/MeshInstance3D" unique_id=1394245816]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note2/MeshInstance3D/StaticBody3D" unique_id=2079548389]
+shape = SubResource("ConcavePolygonShape3D_mwsj6")
+
+[node name="Note3" type="Node3D" parent="Notes" unique_id=397376611]
+transform = Transform3D(0.93928605, 0, 0.34313515, 0, 1, 0, -0.34313515, 0, 0.93928605, -13.400578, 1.3955781, -19.99226)
+script = ExtResource("11_l8yi8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note3" unique_id=1029098238]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
+mesh = SubResource("BoxMesh_wyfj1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note3/MeshInstance3D" unique_id=1904442330]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note3/MeshInstance3D/StaticBody3D" unique_id=2024920668]
+shape = SubResource("ConcavePolygonShape3D_mwsj6")
+
+[node name="Note4" type="Node3D" parent="Notes" unique_id=718276769]
+transform = Transform3D(0.93928605, 0, 0.34313515, 0, 1, 0, -0.34313515, 0, 0.93928605, -13.686468, 1.3955781, -5.081873)
+script = ExtResource("11_l8yi8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note4" unique_id=880099680]
+transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
+mesh = SubResource("BoxMesh_wyfj1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note4/MeshInstance3D" unique_id=218136010]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note4/MeshInstance3D/StaticBody3D" unique_id=379885304]
+shape = SubResource("ConcavePolygonShape3D_mwsj6")
 
 [editable path="Map"]

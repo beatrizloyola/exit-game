@@ -238,8 +238,8 @@ shape = SubResource("BoxShape3D_12o68")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1113147344]
 transform = Transform3D(-9.669999, 0, 2.6226832e-08, 0, 2.68, 0, -8.4537817e-07, 0, -0.29999998, -0.8588573, 1.424382, -8.160018)
-mesh = SubResource("BoxMesh_y5s20")
 material_override = ExtResource("10_static")
+mesh = SubResource("BoxMesh_y5s20")
 
 [node name="PassageTrigger" type="Area3D" parent="." unique_id=2108955947]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822237, 1.1190706, -7.901118)
@@ -310,56 +310,56 @@ shape = SubResource("BoxShape3D_a2mcl")
 script = ExtResource("7_7ubti")
 items = Array[ExtResource("8_y5s20")]([SubResource("Resource_pg3vg"), SubResource("Resource_aq07l"), SubResource("Resource_7ubti"), SubResource("Resource_y5s20")])
 
-[node name="Note1" type="Node3D" parent="." unique_id=1992397101]
+[node name="Note1" type="Node3D" parent="Notes" unique_id=1992397101]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3494034, 0.8637984, 0)
 script = ExtResource("9_y5s20")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note1" unique_id=402336967]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note1" unique_id=402336967]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_pg3vg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note1/MeshInstance3D" unique_id=599574762]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note1/MeshInstance3D" unique_id=599574762]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note1/MeshInstance3D/StaticBody3D" unique_id=1284815396]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note1/MeshInstance3D/StaticBody3D" unique_id=1284815396]
 shape = SubResource("ConcavePolygonShape3D_aq07l")
 
-[node name="Note2" type="Node3D" parent="." unique_id=772236388]
+[node name="Note2" type="Node3D" parent="Notes" unique_id=772236388]
 transform = Transform3D(0.73607343, 0, 0.6769017, 0, 1, 0, -0.6769017, 0, 0.73607343, -4.3494034, 0.8637984, 7.056714)
 script = ExtResource("9_y5s20")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note2" unique_id=1705022012]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note2" unique_id=1705022012]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_pg3vg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note2/MeshInstance3D" unique_id=640883202]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note2/MeshInstance3D" unique_id=640883202]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note2/MeshInstance3D/StaticBody3D" unique_id=2875415]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note2/MeshInstance3D/StaticBody3D" unique_id=2875415]
 shape = SubResource("ConcavePolygonShape3D_aq07l")
 
-[node name="Note3" type="Node3D" parent="." unique_id=1797677182]
+[node name="Note3" type="Node3D" parent="Notes" unique_id=1797677182]
 transform = Transform3D(0.15069154, 0, -0.9885808, 0, 1, 0, 0.9885808, 0, 0.15069154, 0.23568714, 0.8637984, 5.40187)
 script = ExtResource("9_y5s20")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note3" unique_id=302701850]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note3" unique_id=302701850]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_pg3vg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note3/MeshInstance3D" unique_id=1795226243]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note3/MeshInstance3D" unique_id=1795226243]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note3/MeshInstance3D/StaticBody3D" unique_id=181641815]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note3/MeshInstance3D/StaticBody3D" unique_id=181641815]
 shape = SubResource("ConcavePolygonShape3D_aq07l")
 
-[node name="Note4" type="Node3D" parent="." unique_id=1421725370]
+[node name="Note4" type="Node3D" parent="Notes" unique_id=1421725370]
 transform = Transform3D(-0.29363984, 0, -0.95591605, 0, 1, 0, 0.95591605, 0, -0.29363984, 0.23568714, 0.8637984, -0.8884635)
 script = ExtResource("9_y5s20")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Note4" unique_id=649150196]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note4" unique_id=649150196]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_pg3vg")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Note4/MeshInstance3D" unique_id=1213899881]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note4/MeshInstance3D" unique_id=1213899881]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Note4/MeshInstance3D/StaticBody3D" unique_id=216951970]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note4/MeshInstance3D/StaticBody3D" unique_id=216951970]
 shape = SubResource("ConcavePolygonShape3D_aq07l")
 
 [editable path="Map"]
