@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="3_7ubti"]
 [ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="3_fgckq"]
 [ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="4_7ubti"]
-[ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="5_y5s20"]
 [ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="7_7ubti"]
+[ext_resource type="PackedScene" uid="uid://btl1c74t5bekl" path="res://scenes/leverswitch.tscn" id="7_pg3vg"]
 [ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="8_y5s20"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="9_y5s20"]
 [ext_resource type="Material" path="res://assets/materials/static_wall_material.tres" id="10_static"]
@@ -81,12 +81,6 @@ material = SubResource("StandardMaterial3D_65psr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rssmv"]
 size = Vector3(10, 3, 0.3)
-
-[sub_resource type="BoxMesh" id="BoxMesh_ess2x"]
-size = Vector3(0.4, 0.4, 0.4)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_a2mcl"]
-size = Vector3(0.3336548, 0.46608886, 0.51362306)
 
 [sub_resource type="Resource" id="Resource_pg3vg"]
 script = ExtResource("8_y5s20")
@@ -262,49 +256,21 @@ target_value = false
 
 [node name="Switchs" type="Node" parent="." unique_id=1239937117]
 
-[node name="SwitchA" type="StaticBody3D" parent="Switchs" unique_id=1000004646]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5110607, 1.2270364, 3.05186)
-script = ExtResource("5_y5s20")
+[node name="LeverSwitchA" parent="Switchs" unique_id=1897908362 instance=ExtResource("7_pg3vg")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.51, 1.2003434, 3.052)
 symbol = "A"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchA" unique_id=1180716450]
-mesh = SubResource("BoxMesh_ess2x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchA" unique_id=1702987853]
-shape = SubResource("BoxShape3D_a2mcl")
-
-[node name="SwitchB" type="StaticBody3D" parent="Switchs" unique_id=1848212056]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9362125, 1.032803, -4.5096927)
-script = ExtResource("5_y5s20")
+[node name="LeverSwitchB" parent="Switchs" unique_id=231813136 instance=ExtResource("7_pg3vg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.9693804, 0.9780766, -4.51)
 symbol = "B"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchB" unique_id=1443611649]
-mesh = SubResource("BoxMesh_ess2x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchB" unique_id=880013089]
-shape = SubResource("BoxShape3D_a2mcl")
-
-[node name="SwitchC" type="StaticBody3D" parent="Switchs" unique_id=821878151]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.775379, 2.0481935, 9.999664)
-script = ExtResource("5_y5s20")
+[node name="LeverSwitchC" parent="Switchs" unique_id=727934479 instance=ExtResource("7_pg3vg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.775, 2.048, 9.9700365)
 symbol = "C"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchC" unique_id=982605024]
-mesh = SubResource("BoxMesh_ess2x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchC" unique_id=1993172208]
-shape = SubResource("BoxShape3D_a2mcl")
-
-[node name="SwitchD" type="StaticBody3D" parent="Switchs" unique_id=1229093633]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9286253, 1.1144204, 3.2994587)
-script = ExtResource("5_y5s20")
+[node name="LeverSwitchD" parent="Switchs" unique_id=1222582776 instance=ExtResource("7_pg3vg")]
+transform = Transform3D(0.17364821, 0.98480767, 4.304731e-08, 0, -4.3711385e-08, 1, 0.98480767, -0.17364821, -7.590405e-09, 2.8725197, 1.2042162, 3.299)
 symbol = "D"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchD" unique_id=227297459]
-mesh = SubResource("BoxMesh_ess2x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchD" unique_id=24593361]
-shape = SubResource("BoxShape3D_a2mcl")
 
 [node name="Notes" type="Node" parent="." unique_id=844279338]
 script = ExtResource("7_7ubti")

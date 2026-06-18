@@ -145,6 +145,7 @@ metadata/_custom_type_script = "uid://ciauqs7ueoib"
 [sub_resource type="Resource" id="Resource_bh1vf"]
 script = ExtResource("36_iiu4r")
 text = "((A ^ B) v (C ^ D)) = F"
+is_tip = true
 metadata/_custom_type_script = "uid://ciauqs7ueoib"
 
 [sub_resource type="BoxMesh" id="BoxMesh_u77k1"]

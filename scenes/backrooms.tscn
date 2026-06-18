@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bh85o01sl31ge" path="res://assets/backrooms/backrooms_layer_0_0.png" id="4_65psr"]
 [ext_resource type="Texture2D" uid="uid://b16feqyswblxk" path="res://assets/backrooms/backrooms_layer_0_1.png" id="5_tm27x"]
 [ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="6_v0yhu"]
-[ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="7_csh2x"]
 [ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="8_l1pow"]
 [ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="9_gst4v"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="10_1kqkm"]
+[ext_resource type="PackedScene" uid="uid://btl1c74t5bekl" path="res://scenes/leverswitch.tscn" id="10_tm27x"]
 [ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="11_65psr"]
 [ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="12_tm27x"]
 [ext_resource type="Material" path="res://assets/materials/static_wall_material.tres" id="13_static"]
@@ -180,12 +180,6 @@ glow_strength = 0.84
 glow_map_strength = 0.75
 fog_light_energy = 0.0
 fog_density = 0.0306
-
-[sub_resource type="BoxMesh" id="BoxMesh_xx1vg"]
-size = Vector3(0.4, 0.4, 0.4)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_x4tqr"]
-size = Vector3(0.4, 0.4, 0.4)
 
 [sub_resource type="BoxMesh" id="BoxMesh_wmxy6"]
 
@@ -717,28 +711,6 @@ environment = SubResource("Environment_y1yr2")
 script = ExtResource("6_v0yhu")
 level_id = "backrooms"
 
-[node name="SwitchA" type="StaticBody3D" parent="." unique_id=1348156631]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.750972, 1.5591404, 3.5648618)
-script = ExtResource("7_csh2x")
-symbol = "A"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SwitchA" unique_id=509350593]
-mesh = SubResource("BoxMesh_xx1vg")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchA" unique_id=2016286901]
-shape = SubResource("BoxShape3D_x4tqr")
-
-[node name="SwitchB" type="StaticBody3D" parent="." unique_id=1055047963]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6601963, 1, -0.75535065)
-script = ExtResource("7_csh2x")
-symbol = "B"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="SwitchB" unique_id=1273184377]
-mesh = SubResource("BoxMesh_xx1vg")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SwitchB" unique_id=1218564963]
-shape = SubResource("BoxShape3D_x4tqr")
-
 [node name="PassageWall" type="StaticBody3D" parent="." unique_id=507928849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -18)
 
@@ -772,60 +744,70 @@ open_distance = 3.5
 script = ExtResource("9_gst4v")
 level_id = "backrooms"
 
-[node name="Node" type="Node" parent="." unique_id=199475877]
+[node name="Switchs" type="Node" parent="." unique_id=1128089976]
+
+[node name="LeverSwitchA" parent="Switchs" unique_id=1897908362 instance=ExtResource("10_tm27x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74, 1.8, 3.641)
+symbol = "A"
+
+[node name="LeverSwitchB" parent="Switchs" unique_id=645912619 instance=ExtResource("10_tm27x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.66, 1.5, -0.745)
+symbol = "B"
+
+[node name="Notes" type="Node" parent="." unique_id=199475877]
 script = ExtResource("11_65psr")
 items = Array[ExtResource("12_tm27x")]([SubResource("Resource_v0yhu"), SubResource("Resource_csh2x"), SubResource("Resource_l1pow"), SubResource("Resource_gst4v")])
 
-[node name="Note1" type="Node3D" parent="Node" unique_id=1215628889]
+[node name="Note1" type="Node3D" parent="Notes" unique_id=1215628889]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1457372, 0.68089294, 14.656182)
 script = ExtResource("10_1kqkm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node/Note1" unique_id=783827982]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note1" unique_id=783827982]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_tm27x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node/Note1/MeshInstance3D" unique_id=1134358816]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note1/MeshInstance3D" unique_id=1134358816]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/Note1/MeshInstance3D/StaticBody3D" unique_id=720324900]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note1/MeshInstance3D/StaticBody3D" unique_id=720324900]
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
-[node name="Note2" type="Node3D" parent="Node" unique_id=1637798846]
+[node name="Note2" type="Node3D" parent="Notes" unique_id=1637798846]
 transform = Transform3D(0.58056086, 0, 0.81421685, 0, 1, 0, -0.81421685, 0, 0.58056086, 2.6208034, 0.68089294, -7.21996)
 script = ExtResource("10_1kqkm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node/Note2" unique_id=1897074064]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note2" unique_id=1897074064]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_tm27x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node/Note2/MeshInstance3D" unique_id=1087254169]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note2/MeshInstance3D" unique_id=1087254169]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/Note2/MeshInstance3D/StaticBody3D" unique_id=1776894038]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note2/MeshInstance3D/StaticBody3D" unique_id=1776894038]
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
-[node name="Note3" type="Node3D" parent="Node" unique_id=2082265542]
+[node name="Note3" type="Node3D" parent="Notes" unique_id=2082265542]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6208034, 0.68089294, -1.5232575)
 script = ExtResource("10_1kqkm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node/Note3" unique_id=2137702764]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note3" unique_id=2137702764]
 transform = Transform3D(0.4395197, 0, 0.69770294, 0, 0.025890613, 0, -0.4280565, 0, 0.71638715, 3.4335856, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_tm27x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node/Note3/MeshInstance3D" unique_id=862563438]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note3/MeshInstance3D" unique_id=862563438]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/Note3/MeshInstance3D/StaticBody3D" unique_id=2031367842]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note3/MeshInstance3D/StaticBody3D" unique_id=2031367842]
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
-[node name="Note4" type="Node3D" parent="Node" unique_id=1354791142]
+[node name="Note4" type="Node3D" parent="Notes" unique_id=1354791142]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.76075, 0.68089294, -2.9660878)
 script = ExtResource("10_1kqkm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node/Note4" unique_id=2061489973]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Notes/Note4" unique_id=2061489973]
 transform = Transform3D(0.11344765, 0, 0.98275506, 0, 0.025890611, 0, -0.60294235, 0, 0.1849119, 3.4335861, -0.68003297, -2.5288572)
 mesh = SubResource("BoxMesh_tm27x")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node/Note4/MeshInstance3D" unique_id=103341994]
+[node name="StaticBody3D" type="StaticBody3D" parent="Notes/Note4/MeshInstance3D" unique_id=103341994]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node/Note4/MeshInstance3D/StaticBody3D" unique_id=1018869095]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Notes/Note4/MeshInstance3D/StaticBody3D" unique_id=1018869095]
 shape = SubResource("ConcavePolygonShape3D_1kqkm")
 
 [editable path="Map"]
