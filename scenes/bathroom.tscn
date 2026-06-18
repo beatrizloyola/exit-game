@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cvciyfu0rwec" path="res://assets/bathroom/FBXs/stall_open_R.fbx" id="25_iiu4r"]
 [ext_resource type="PackedScene" uid="uid://so10j8ygbm8f" path="res://assets/bathroom/FBXs/sink.fbx" id="26_bk7cg"]
 [ext_resource type="ArrayMesh" uid="uid://ca8uifuflmhjr" path="res://assets/bathroom/OBJs/stall_open_R/stall_open_R.obj" id="29_ycb2m"]
+[ext_resource type="Material" path="res://assets/materials/static_wall_material.tres" id="31_iiu4r"]
 [ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="31_lxtqw"]
 [ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="32_jvwv0"]
 [ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="33_57brq"]
@@ -101,9 +102,9 @@ data = PackedVector3Array(-23.8603, 2.3999999, 23.1472, -23.8603, 2.1631, 23.147
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65psr"]
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 2.34
+emission_energy_multiplier = 3.51
 
-[sub_resource type="BoxMesh" id="BoxMesh_bh1vf"]
+[sub_resource type="BoxMesh" id="BoxMesh_bk7cg"]
 material = SubResource("StandardMaterial3D_65psr")
 
 [sub_resource type="Environment" id="Environment_c3o6o"]
@@ -1269,9 +1270,10 @@ shape = SubResource("ConcavePolygonShape3D_hq5ij")
 [node name="stall_open_fudido_L3" parent="Map/stalls" unique_id=1720920464 instance=ExtResource("22_lxtqw")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.8033953, 0, 7.907955)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Map" unique_id=550440496]
-transform = Transform3D(-9.669999, 0, 2.6226832e-08, 0, 2.68, 0, -8.4537817e-07, 0, -0.29999998, -6.3458095, 1.5, 0.091048)
-mesh = SubResource("BoxMesh_bh1vf")
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Map" unique_id=1073099879]
+transform = Transform3D(9.67, 0, -2.7040512e-08, 0, 2.68, 0, 8.7160583e-07, 0, 0.3, -6.346, 1.5, 0.091)
+material_override = ExtResource("31_iiu4r")
+mesh = SubResource("BoxMesh_bk7cg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1518271264]
 environment = SubResource("Environment_c3o6o")
