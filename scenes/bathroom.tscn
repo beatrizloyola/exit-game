@@ -33,10 +33,9 @@
 [ext_resource type="Script" uid="uid://dur7oodktt3g4" path="res://scripts/logic_level.gd" id="31_lxtqw"]
 [ext_resource type="Script" uid="uid://fy3jqj4pgt6x" path="res://scripts/passage.gd" id="32_jvwv0"]
 [ext_resource type="Script" uid="uid://bnwhunm4cf646" path="res://scripts/level_hud.gd" id="33_57brq"]
-[ext_resource type="Script" uid="uid://deetldpb7a3xj" path="res://scripts/toggle_interactable.gd" id="34_iiu4r"]
 [ext_resource type="Script" uid="uid://csbistlpuascv" path="res://scripts/note_sequence.gd" id="35_57brq"]
 [ext_resource type="Script" uid="uid://djxre3mw8ucui" path="res://scripts/note.gd" id="35_bk7cg"]
-[ext_resource type="PackedScene" uid="uid://btl1c74t5bekl" path="res://scenes/leverSwitch.tscn" id="35_iiu4r"]
+[ext_resource type="PackedScene" uid="uid://btl1c74t5bekl" path="res://scenes/leverswitch.tscn" id="35_iiu4r"]
 [ext_resource type="Script" uid="uid://ciauqs7ueoib" path="res://scripts/note_item.gd" id="36_iiu4r"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_j2cwc"]
@@ -127,12 +126,6 @@ size = Vector3(9.711548, 2.8973389, 0.62976074)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u77k1"]
 size = Vector3(10, 3, 0.3)
-
-[sub_resource type="BoxMesh" id="BoxMesh_occwe"]
-size = Vector3(0.4, 0.4, 0.4)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ft3q5"]
-size = Vector3(0.3336548, 0.46608886, 0.51362306)
 
 [sub_resource type="Resource" id="Resource_bk7cg"]
 script = ExtResource("36_iiu4r")
@@ -1319,44 +1312,21 @@ target_value = false
 
 [node name="Switchs" type="Node" parent="." unique_id=1120389537]
 
-[node name="SwitchB" type="StaticBody3D" parent="Switchs" unique_id=688095813]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.089561, 1.032803, -15.8331785)
-script = ExtResource("34_iiu4r")
-symbol = "B"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchB" unique_id=1680643645]
-mesh = SubResource("BoxMesh_occwe")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchB" unique_id=1466115643]
-shape = SubResource("BoxShape3D_ft3q5")
-
-[node name="SwitchC" type="StaticBody3D" parent="Switchs" unique_id=126117017]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.91167, 1.5686617, -5.0934734)
-script = ExtResource("34_iiu4r")
-symbol = "C"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchC" unique_id=210159393]
-mesh = SubResource("BoxMesh_occwe")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchC" unique_id=2140122465]
-shape = SubResource("BoxShape3D_ft3q5")
-
-[node name="SwitchD" type="StaticBody3D" parent="Switchs" unique_id=46195663]
-transform = Transform3D(0.94832367, 0, -0.31730464, 0, 1, 0, 0.31730464, 0, 0.94832367, -18.803432, 0.85547674, -2.9946864)
-script = ExtResource("34_iiu4r")
-symbol = "D"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Switchs/SwitchD" unique_id=247047938]
-mesh = SubResource("BoxMesh_occwe")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Switchs/SwitchD" unique_id=1498634226]
-shape = SubResource("BoxShape3D_ft3q5")
-
 [node name="LeverSwitchA" parent="Switchs" unique_id=1897908362 instance=ExtResource("35_iiu4r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.050968, 1.227, -15.922214)
 symbol = "A"
 
 [node name="LeverSwitchB" parent="Switchs" unique_id=650569630 instance=ExtResource("35_iiu4r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.227, -15.920206)
+symbol = "B"
+
+[node name="LeverSwitchC" parent="Switchs" unique_id=1292731703 instance=ExtResource("35_iiu4r")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -23.973686, 1.6, -5.09)
+symbol = "C"
+
+[node name="LeverSwitchD" parent="Switchs" unique_id=1662158548 instance=ExtResource("35_iiu4r")]
+transform = Transform3D(0.32226565, -0.94664925, -4.137935e-08, 0, -4.371139e-08, 1, -0.94664925, -0.32226565, -1.4086679e-08, -18.81025, 0.95521927, -2.994294)
+symbol = "D"
 
 [node name="Notes" type="Node" parent="." unique_id=1694544861]
 script = ExtResource("35_57brq")
