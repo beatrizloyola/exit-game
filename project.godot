@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 Transition="*res://scripts/transition.gd"
 NoteReader="*res://scripts/note_reader.gd"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_accept={
