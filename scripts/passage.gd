@@ -11,11 +11,15 @@ extends Node3D
 var _wall: Node3D
 var _trigger: Area3D
 var _is_open := false
+var _original_position: Vector3
 
 
 func _ready() -> void:
 	if wall_path != NodePath():
 		_wall = get_node_or_null(wall_path)
+		if _wall != null:
+			_original_position = _wall.position
+			
 	if trigger_path != NodePath():
 		_trigger = get_node_or_null(trigger_path)
 
@@ -30,6 +34,7 @@ func _connect_logic() -> void:
 	var logic_level = get_tree().get_first_node_in_group("logic_level")
 	if logic_level != null:
 		logic_level.solved.connect(open)
+		logic_level.unsolved.connect(close)
 
 
 func open() -> void:
@@ -47,6 +52,23 @@ func open() -> void:
 
 	if _trigger != null:
 		tween.tween_callback(func(): _trigger.monitoring = true)
+
+
+func close() -> void:
+	if not _is_open or _wall == null:
+		return
+	_is_open = false
+
+	if _trigger != null:
+		_trigger.monitoring = false
+
+	var tween := create_tween()
+	tween.tween_property(
+		_wall,
+		"position",
+		_original_position,
+		open_duration
+	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
 func _on_trigger_entered(body: Node3D) -> void:

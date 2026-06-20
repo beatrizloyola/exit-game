@@ -3,6 +3,7 @@ extends Node
 
 signal expression_updated(vars: Dictionary, result: bool)
 signal solved
+signal unsolved
 
 @export var level_id: String = "tutorial"
 @export var target_value: bool = true
@@ -42,7 +43,11 @@ func _check() -> void:
 	var result := LogicEvaluator.evaluate(level_id, vars)
 	expression_updated.emit(vars, result)
 	var all_discovered := _discovered.size() == vars.size()
+	var is_correct := (result == target_value) and _note_found and all_discovered
 
-	if result == target_value and _note_found and all_discovered and not _already_solved:
+	if is_correct and not _already_solved:
 		_already_solved = true
 		solved.emit()
+	elif not is_correct and _already_solved:
+		_already_solved = false
+		unsolved.emit()

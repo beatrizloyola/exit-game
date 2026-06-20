@@ -37,6 +37,7 @@ func _ready() -> void:
 	if logic_level != null:
 		logic_level.expression_updated.connect(_on_expression_updated)
 		logic_level.solved.connect(_on_solved)
+		logic_level.unsolved.connect(_on_unsolved)
 
 	call_deferred("_connect_switches")
 
@@ -65,6 +66,12 @@ func _on_expression_updated(vars: Dictionary, _result: bool) -> void:
 func _on_solved() -> void:
 	_solved = true
 	_label.add_theme_color_override("font_color", Color(0.4, 1.0, 0.4))
+	_update_display()
+
+
+func _on_unsolved() -> void:
+	_solved = false
+	_label.add_theme_color_override("font_color", Color(1.0, 1.0, 0.4)) # Back to Yellow
 	_update_display()
 
 
